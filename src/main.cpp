@@ -26,8 +26,6 @@ auto base36_decode(std::string value)
 
 int main(int argc, char* argv[]) 
 {
-    std::cout << "Hello World!\n";
-#if 1
     try {
         ice::Library icsneo("icsneo40");
         ice::Function<int __stdcall (NeoDeviceEx*, int*, unsigned int*, unsigned int, POptionsFindNeoEx*, unsigned long)> icsneoFindDevices(&icsneo, "icsneoFindDevices");
@@ -106,7 +104,6 @@ int main(int argc, char* argv[])
                 std::cout << "                             \r";
             }
         }
-#endif
     } catch (ice::Exception& ex) {
         std::cerr << ex.whatString() << "\n";
         return 1;
